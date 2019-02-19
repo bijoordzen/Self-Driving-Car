@@ -1,0 +1,47 @@
+Notes:-
+1)It can be implemented in nine lines of keras
+2)Udacity Self Driving Simulator built with unity.
+3)Gravity,momentum,acceleration already added in simulator.
+4)Got two moddes training and autonomous
+5)Three parts 
+a)Data generation
+b)training 
+c)testing
+6)9 layer cnn,attached three cameras and made human drive the car
+7)Cameras used to collect data
+8)What was the  Data:- steering commands and camera feed.
+Four physics variable:-1) angle,speed,throttle,break along with associated video feed from cameras center ,left ,right.
+9)Data saved in .csv files.
+10)Machine learning will clone the behaviour of how the human will drive the car .This is called as behavioral cloning.
+11)Data goes into Nvidia Drive PX Card and is saved in an ssd 
+12)Steering commands fed inside the GPU is taken 1/r and not r to make system independent of car geometry.
+13)Computing loss between autonomus vs human generated data and reduce by backpropagation by updating weights.
+For testing we have server and client like architecture 
+server is simulator 
+client is our python program 
+and both server and client will be in feedback loop.
+
+
+
+HOW TO RUN ? 
+first give permission to beta_simulator.x86_64 to run as exe by right clicking on it 
+then run the beta_simulator.x86_64 in training mode 
+use w,a,s,d or arrow keys to move the car 
+For creating the .csv file the recorded video will pe replayed and images will be captured.
+press r to record the training and r again to pause the training to generate .csv file 
+
+
+first on ubuntu create environment using this command by being in this directory.
+
+conda env create environments.yml 
+
+After that activate the environment 
+
+source activate car-behavioral-cloning
+
+Then for compiling and creating model file give path of created .csv file into model.py file  and run model.py file
+
+python model.py
+
+
+for keras upgrade version np.var
