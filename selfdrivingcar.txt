@@ -15,11 +15,7 @@ Four physics variable:-1) angle,speed,throttle,break along with associated video
 10)Machine learning will clone the behaviour of how the human will drive the car .This is called as behavioral cloning.
 11)Data goes into Nvidia Drive PX Card and is saved in an ssd 
 12)Steering commands fed inside the GPU is taken 1/r and not r to make system independent of car geometry.
-13)Computing loss between autonomus vs human generated data and reduce by backpropagation by updating weights.
-For testing we have server and client like architecture 
-server is simulator 
-client is our python program 
-and both server and client will be in feedback loop.
+13)Computing loss between autonomus vs human generated data and reduce by backpropagation by updating weights.For testing we have server and client like architecture where server is simulator & client is our python program  and both server and client will be in feedback loop.
 
 
 HOW TO RUN ? 
