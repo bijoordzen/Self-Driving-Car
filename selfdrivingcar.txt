@@ -22,26 +22,30 @@ client is our python program
 and both server and client will be in feedback loop.
 
 
-
 HOW TO RUN ? 
-first give permission to beta_simulator.x86_64 to run as exe by right clicking on it 
-then run the beta_simulator.x86_64 in training mode 
-use w,a,s,d or arrow keys to move the car 
-For creating the .csv file the recorded video will pe replayed and images will be captured.
-press r to record the training and r again to pause the training to generate .csv file 
+some download links 
+:- https://github.com/udacity/self-driving-car-sim
+:- https://github.com/llSourcell/How_to_simulate_a_self_driving_car
+:- https://github.com/naokishibuya/car-behavioral-cloning
+
+1)Download Linux/Ubuntu version of beta_simulator.x86_64.No need to install unity then give permission to beta_simulator.x86_64 to run as exe by right clicking on it then run the beta_simulator.x86_64 in training mode 
+2)use w,a,s,d or arrow keys to move the car 
+3)For creating the .csv file the recorded video will pe replayed and images will be captured.
+4)Press r to record the training and r again to pause the training to generate .csv file 
+5)first on ubuntu create environment using this command by being in this directory.
+   conda env create environments.yml 
+
+6)After that activate the environment 
+   source activate car-behavioral-cloning
+7)after that install the req.txt file provided in the repo to update the packages.
+
+8)after that update all the packages in the environment using below command
+
+   pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
 
 
-first on ubuntu create environment using this command by being in this directory.
 
-conda env create environments.yml 
+9)Then for compiling and creating model file give path of created .csv file into model.py file  and run model.py file
 
-After that activate the environment 
-
-source activate car-behavioral-cloning
-
-Then for compiling and creating model file give path of created .csv file into model.py file  and run model.py file
-
-python model.py
-
-
-for keras upgrade version np.var
+  python model.py
+ 
